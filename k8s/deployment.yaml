@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: temp-converter-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: temp-converter-app
+  template:
+    metadata:
+      labels:
+        app: temp-converter-app
+    spec:
+      containers:
+        - name: temp-converter-app
+          image: temp-converter-app:latest
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Never
