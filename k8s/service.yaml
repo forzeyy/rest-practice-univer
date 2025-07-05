@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: go-app
+    app: temp-converter-app
   ports:
     - protocol: TCP
       port: 80
